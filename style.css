@@ -1,0 +1,454 @@
+
+/*Garante que o preenchimento e a borda sejam incluídos na largura e altura totais dos elementos.*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('fundo.jpg'); /*imagem de fundo do body */
+    background-size: cover; /* A imagem cobrirá toda áres */
+    background-position: center;
+    background-repeat: no-repeat; /* Impede que imagem repita*/
+    background-attachment: fixed; /* fixa a imagem ao rolar a página*/
+}
+
+/*Local onde está posioconado os menus*/
+header {
+    background-color: #2c2c2c;
+    padding: 25px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: orange;
+    font-size: 120%; /*O tamanho da fonte vai aumentar 120% ao colocar o cursor sobre ele*/
+}
+
+/*Estilos para o menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: yellow;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+
+ /* Media Queries de responsividade para telas menores */
+ @media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: #333;
+        width: 250px;
+        padding: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: right;
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
+/*Colocando o Marcador na cor amarelo*/
+::marker {
+    color: yellow;
+    font-size: 40px;
+  }
+
+/*Muda a cor na 1ª linha*/
+h3::first-line {
+    color: yellow;
+    margin-bottom: 0;
+  }
+
+  /*Formação educacional em amarelo e sem itálico*/
+em{
+    color: yellow;
+    font-style: normal;
+}
+
+/*Estilização dos títulos*/
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: orange;
+}
+
+/*Estilização dos títulos*/
+h2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Estilo para a div com a classe "paragrafo" */
+.paragrafo{
+    text-align: justify;
+    margin: 0 auto;
+    padding: 30px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px;
+}
+
+/*Estilo da lina amarela usada no rodapé de cada página*/
+.linha-amarela-fixa {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: orange;
+    border: 0;
+    margin: 0;
+}
+
+/*Linha usada acima do radapé da página contato*/
+.linha-amarela {
+    position: relative;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: orange; 
+    border: 0;
+    margin: 0;
+}
+
+   /* Estilo para a imagem responsiva */
+.imagem-responsiva {
+    max-width: 100%; /* tamanho da imagem limita a largura do conteiner */
+    height: auto; 
+    display: block;  /* Remove qualquer espaço em torno da imagem */
+    margin: 0 auto;
+
+}
+
+/* Estilo do contêiner para imagem */
+.container-imagem {
+    width: 100%;  /* A largura do contêiner será 100% do seu elemento pai */
+    max-width: 600px; /* Largura máxima do contêiner para restringir o tamanho em telas maiores */
+    margin: 0 auto;
+    float:left; 
+}
+
+/*Estilização do formulário de contato*/
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #444;
+    background-color: #222;
+}
+
+/* Responsividade do formulário de contato */
+@media (max-width: 600px) {
+    form {
+        margin: 20px;
+        padding: 15px;
+    }
+}
+
+form label {
+    display: block;
+    margin-bottom: 11px;
+}
+
+/*estilização do formulário*/
+form input[type="text"],
+form input[type="email"],
+form input[type="telefone"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #555;
+    border-radius: 5px;
+    color: white;
+}
+
+textarea {
+    /*Redimensiona o tamanho da caixa de mensagem*/
+    width: 100%;
+    height: 120px;
+    border-radius: 15px;
+}
+
+/*Estilo para o botão de envio*/
+form input[type="submit"] {
+    background-color: yellow;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*Inserindo efeito hover no botão de envio*/
+form input[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+
+/*Estilização para o dormulário de contato*/
+.contato{
+    padding-top: 10px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.botao_GitHub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoes-formacao{
+    align-items: center;
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em uma coluna (um abaixo do outro) */
+    gap: 20px;
+}
+
+
+/*Estilo do botão do meu GitHub*/
+button {
+    background-color: yellow; /* Cor amarelo */
+    color: black; /* Cor do texto */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Efeito hover do Botão do GitHub */
+button:hover {
+    background-color: #FFC300; /* Um tom um pouco mais escuro de amarelo */
+}
+
+/*Estilo do botão início que retorna a página index*/
+  .link-index{ 
+    top: center; 
+    left: 10px;
+    color: rgb(156, 4, 4); 
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #CCFF00;
+    padding: 5px 10px;
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0px 2px 5px rgba(0, 207, 86, 0.2); /* Sombra para destacar o link */
+  }
+
+  /*Estilo para foto do perfil*/
+.foto-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-perfil img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Faz a imagem ficar arredondada */
+    border: 5px solid #FFD700;
+    display: block;
+    margin: 0 auto;
+}
+
+/*Estilo para imagem do Selo CPA 20*/
+.Selo-CPA20 img {
+    width: 100px;
+    height: auto; 
+    display: block;
+    margin-bottom: 40px; 
+    margin: 0 auto 40px auto;
+}
+
+/*Estilização da imagem GitHub*/
+.botao_GitHub img {
+    width: 200px;
+    height: auto;
+    align-items: center;
+}
+
+
+/*Estilização dos itens de contato*/
+.item-contato {
+    flex: 1 1 50px; /* Cada item pode ocupar no mínimo 50px */
+    min-width: 300px; 
+}
+
+/* Estilo dos contatos no rodapé para dispositivos móveis */
+@media (max-width: 600px) {
+    .contato-rodape {
+        flex-direction: column; /* Empilhamento dos itens na vertial em telas pequenas */
+        gap:5px;
+    }
+}
+
+
+/*Estilização do rodapé da página de contato*/
+#contato-footer {
+    margin-top: auto;
+    position: inherit;
+    bottom: 0;
+    left: 0;
+    background-color: #2c2c2c;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    min-height: 10vh;
+}
+
+/* Estilização do conteiner de formação acadêmica */
+.formacao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* lista de formação acadêmica */
+.lista-formacao {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 30%; /* Ocupa 30% no computador */
+}
+
+.formacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid yellow;
+    border-radius: 10px; 
+    background-color: #333; 
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 100%; 
+}
+
+.curso {
+    flex: 2;
+    color: yellow; 
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .lista-formacao {
+        width: 100%; /* Ocupa 100% da largura da tela nos dispositivos móveis */
+    }
+}
+
+
+/* Estilização do contêiner de experiência profissional */
+.experiencia-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+}
+
+
+.lista-experiencia {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 40%; /* Ocupa 30% da largura do contêiner no computador */
+}
+
+.experiencia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 20px;
+    border: 1px solid yellow;
+    border-radius: 10px;
+    background-color: #333; 
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.cargo {
+    text-align: center;
+    color: yellow;
+    font-weight: bold;
+}
+
+
+/*Responsividade da página de experiência*/
+@media (max-width: 768px) {
+    .lista-experiencia {
+        width: 100%;
+    }
+}
