@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav><!--definindo uma seção de navegação na página e agrupando links de navegação-->
+            <ul id="nav-list">
+                <li><a href="index.html" class="link-index">Início</a></li>
+                <li><a href="sobre.html">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação Educacional</a></li>
+                <li><a href="experiencia.html">Experiência Profissional</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Sobre mim</h1>
+        <!--<div class="imagem"><img src="perfil2_josmar.png" alt="Perfil de Josmar";></div>-->
+
+        <div class="container-imagem">
+            <img src="perfil_josmar.png" alt="perfil2_josmar class="imagem-responsiva">
+        </div>
+    </main>
+        <div class="paragrafo">
+            <p>Eu me chamo Josmar Nascimento Martins,
+            casado com Regiane Carvalho, resido em São Sebastião da Vargem Alegre-MG. Sou bacharel em Administração de Empresas e atualmente cursando Análise e Desenvolvimento de Sistemas. Minha trajetória acadêmica e profissional me levou a me especializar em áreas estratégicas de Análise de Marketing Digital, Marketing e Relacionamento com foco no varejo e Auditoria e Controladoria.</p><br>
+            
+        <p>Durante minha formação, tive a oportunidade de aprofundar meus conhecimentos na gestão de marketing, uma área que considero a força motriz das empresas e fundamental para quebrar paradigmas na gestão empresarial. Minha especialização em Análise de Marketing Digital me proporcionou experiência com extração, tratamento e análise de dados, o que despertou meu interesse por tecnologias e sua aplicação na gestão.</p><br>
+            
+        <p>Com o desejo de expandir minha compreensão das ferramentas digitais e técnicas modernas de insights, decidi estudar Análise e Desenvolvimento de Sistemas. Acredito que a integração dessas tecnologias com meu know-how  podem contribuir significativamente para a diferenciação na era digital, em um mundo cada vez mais globalizado.</p><br>
+            
+        <p>Além da minha vida profissional, nas horas vagas gosto de tocar saxofone, praticar musculação e exercitar minha fé como Cristão, encontrando equilíbrio entre minha saúde, carreira profissional, hobbies e espiritualidade.</p></div>
+
+    <footer>
+        <!-- inserindo uma classe para criar uma linha no rodapé -->
+        <hr class="linha-amarela-fixa">
+    </footer>
+
+       
+    </main>
+    <!--Script para implementar um menu de navegação para dispositivos móveis -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

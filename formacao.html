@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação Educacional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav><!--definindo uma seção de navegação na página e agrupando links de navegação-->
+            <ul id="nav-list">
+                <li><a href="index.html" class="link-index">Início</a></li>
+                <li><a href="sobre.html">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação Educacional</a></li>
+                <li><a href="experiencia.html">Experiência Profissional</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--Minhas formações acadêmicas-->
+        <h1>Formação Educacional</h1>
+        <h2>Pós-graduação</h2>
+        <div class="formacao-container">
+            <ul class="lista-formacao">
+                <li class="formacao">
+                    <div class="curso">Pós-graduação Lato Sensu em Análise de Marketing Digital</div>
+                    <span>IFSudeste-MG</span>
+                    <span>(jan de 2022 - dez de 2023)</span>
+                </li>
+                <li class="formacao">
+                    <div class="curso">MBA em Marketing e Relacionamento com Foco no Varejo</div>
+                    <span>IFSudeste-MG</span>
+                    <span>(mar de 2019 - jun de 2021)</span>
+                </li>
+                <li class="formacao">
+                    <div class="curso">Especialização em Auditoria e Controladoria</div>
+                    <span>Centro de Ensino Dom Alberto</span>
+                    <span>(dez de 2021 - jul de 2022)</span>
+                </li>
+                <h2>Graduação</h2>
+                <li class="formacao">
+                    <div class="curso">Tecnólogo em Análise e Desenvolvimento de Sistemas</div>
+                    <span>UNINTER</span>
+                    <span>(fev de 2024 - ago de 2026)</span>
+                </li>
+                <li class="formacao">
+                    <div class="curso">Bacharelado em Administração de Empresas</div>
+                    <span>IFSudeste-MG</span>
+                    <span>(2013 - 2016)</span>
+                </li>
+            </ul>
+        </div>
+        <h2>Certificações</h2>
+        <!--Imagem da minha certificação CPA20-->
+        <div class="Selo-CPA20">
+            <img src="Selo-CPA20.jpg" alt="Cursos">
+        </div><br>
+        
+        <h2>Conheça mais sobre mim:</h2>
+        <!--Div para estilização dos boõtes para o currículo Lates e do Linkedim-->
+        <div class="botoes-formacao">
+            <a href="http://lattes.cnpq.br/4599884788938949" target="_blank">
+                <button>Currículo Lates</button></a>
+
+            <a href="https://www.linkedin.com/in/josmar-nascimento-martins-ab177891?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <button>Linkedin</button></a><br>
+        </div>
+        <footer>
+            <!-- inserindo uma classe para criar uma linha no rodapé -->
+            <hr class="linha-amarela-fixa">
+        </footer>
+    </main>
+    <!--Script para implementar um menu de navegação para dispositivos móveis -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav><!--definindo uma seção de navegação na página e agrupando links de navegação-->
+            <ul id="nav-list">
+                <li><a href="index.html" class="link-index">Início</a></li>
+                <li><a href="sobre.html">Sobre mim</a></li>
+                <li><a href="formacao.html">Formação Educacional</a></li>
+                <li><a href="experiencia.html">Experiência Profissional</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contato</h1>
+        <!--Criando o formulário de contato-->
+        <div class="contato">Deixe sua mensagem:</div>
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <input type="hidden" name="accessKey" value="2e452b9a-8c1d-4612-a501-983902bde678"><!--Chave que direciona a mensagem do usuário para minnha caixa de email-->
+                <input type="hidden" name="redirectTo" value="https://josmarmartins.github.io/portifolio-pessoal/agradecimento.html"><!--Página de agradecimento a ser direcionada após o envio do formulário-->
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="nome@gmail.com"required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="telefone" id="telefone" name="phone" placeholder="11-98745-1665"  pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"required><!--Sugestão e Validação da a entrada do usuário-->
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="message" required></textarea>
+
+                <input type="text" name="honeypot" style="display: none;"> <!--Proteção contra mensagens spam-->
+                
+                <input type="submit" value="Enviar">
+            </form>
+
+        <!--Rodapé contendo contatos e imagem com direcionamentos para links externos-->
+        <footer id="contato-footer" style="clear: both;">  
+            <hr class="linha-amarela"> <!--inserindo uma classe para criar uma linha amarela no rodapé -->
+                <div class="contato-rodape">
+                    <div class="item-contato">
+                        <img src="Telefone.png" alt="Tel" style="vertical-align: middle;">
+                        <span style="color: white;">Tel: (32) 98406-4636</span>
+                    </div>
+                    <div class="item-contato">
+                        <a href="mailto:josmarssva@gmail.com.br" style="text-decoration: none; color: white;">
+                            <img src="mail.png" alt="Email" style="vertical-align: middle;">
+                            josmarssva@gmail.com.br</a>
+                    </div>
+                    <div class="item-contato">
+                        <a href="https://wa.me/5532984064636?text=Ol%C3%A1.%20Venho%20atrav%C3%A9s%20da%20p%C3%A1gina%20do%20seu%20portf%C3%B3lio%20pessoal." target="_blank" style="text-decoration: none; color: white;">
+                            <img src="WhatsApp.png" alt="WhatsApp" style="vertical-align: middle;"></a>
+                            <a href="https://www.instagram.com/josmar__martins/" target="_blank" style="text-decoration: none; color: white;">
+                                <img src="Instagram.png" alt="WhatsApp" style="vertical-align: middle;"></a>        
+                    </div>   
+                </div>      
+        </footer>
+    </main>
+    <!--Script para implementar um menu de navegação para dispositivos móveis -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', function() {
+            navList.classList.toggle('active');
+        });
+
+    // Script para controlar a entrada de digitação do telefone do usuário na página contato
+    document.getElementById('telefone').addEventListener('input', function (e) {
+        let input = e.target.value;
+        input = input.replace(/\D/g, '');
+        input = input.replace(/^(\d{2})(\d)/g, '$1-$2');
+        input = input.replace(/(\d{5})(\d)/, '$1-$2');
+        e.target.value = input;
+    });
+    </script>
+</body>
+</html>
