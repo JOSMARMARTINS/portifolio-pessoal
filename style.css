@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url('fundo.jpg'); /*imagem de fundo do body */
+    background-image: url('img/fundo.jpg'); /*imagem de fundo do body */
     background-size: cover; /* A imagem cobrirá toda áres */
     background-position: center;
     background-repeat: no-repeat; /* Impede que imagem repita*/
