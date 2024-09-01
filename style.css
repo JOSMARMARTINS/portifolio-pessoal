@@ -328,42 +328,38 @@ button:hover {
 }
 
 
+/* Estilo para o layout flexível do rodapé contato*/
+.contato-rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap; 
+    gap: 2px; 
+    margin: 15px auto; 
+    max-width: 1000px; 
+}
+
 /*Estilização dos itens de contato*/
 .item-contato {
     flex: 1 1 50px; /* Cada item pode ocupar no mínimo 50px */
-    min-width: 300px;
-    align-items: center;
+    min-width: 300px; 
 }
 
-/*layout flexível do rodapé contato*/
-.contato-rodape {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap; 
-    gap: 2px; 
-    margin: 15px auto;
-    max-width: 1000px;
+/* Estilo dos contatos no rodapé para dispositivos móveis */
+@media (max-width: 600px) {
+    .contato-rodape {
+        flex-direction: column; /* Empilhamento dos itens na vertial em telas pequenas */
+        gap: 10px;
+    }
 }
 
-
-/* Estilização do rodapé da página de contato */
+/*Estilização do rodapé da página de contato*/
 #contato-footer {
-    bottom: 0;
-    left: 0;
-    background-color: #2c2c2c;
+    margin-top: auto;
+    background-color: #333;
     padding: 5px;
     text-align: center;
-    width: 100%;
-    min-height: 10vh;
-}
-
-@media (max-width: 768px) {
-    .contato-footer {
-        clear: both;
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: center; 
-    }
 }
 
 
